@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book with Darylle · 1970 Salon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-minimal">
+  <header class="header">
+    <div class="header-left">
+      <span class="logo-mark">DR</span>
+      <span class="logo-word">Darylle Rae · 1970 Salon</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Work</a>
+      <a href="contact.html">Consult</a>
+      <a href="book.html" class="pill-link">Book</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-center">
+      <div class="section-inner">
+        <h1>Book an appointment</h1>
+        <p class="muted">
+          All appointments are booked securely through Vagaro. If you’re a new
+          client, I recommend filling out the hair form first so we can choose
+          the right service and timing.
+        </p>
+
+        <!-- Replace href with her real Vagaro stylist link -->
+        <a
+          href="https://www.vagaro.com/your-darylle-link-here"
+          class="btn-primary btn-large"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Go to Vagaro booking
+        </a>
+
+        <p class="small-text">
+          New here? Start with the
+          <a href="contact.html">new client consultation form</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Darylle Rae Alvarez. All rights reserved.</p>
+  </footer>
+
+  <div class="mobile-cta-bar">
+    <a
+      href="https://www.vagaro.com/your-darylle-link-here"
+      class="mobile-cta-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Book on Vagaro
+    </a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

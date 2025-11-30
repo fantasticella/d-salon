@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New Client Form · Darylle Rae Alvarez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-minimal">
+  <header class="header">
+    <div class="header-left">
+      <span class="logo-mark">DR</span>
+      <span class="logo-word">Darylle Rae · 1970 Salon</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Work</a>
+      <a href="contact.html" class="pill-link">Consult</a>
+      <a href="book.html">Book</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-inner">
+        <h1>New client consultation form</h1>
+        <p class="muted">
+          Share a few details about your hair so I can recommend the best
+          service and amount of time for your first appointment.
+        </p>
+
+        <!-- Easiest: mailto. Later you can hook this to Formspree/Netlify. -->
+        <form class="form"
+              action="mailto:youremail@example.com"
+              method="POST"
+              enctype="text/plain">
+          <div class="form-row">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="Name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="Email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="Phone" />
+          </div>
+
+          <div class="form-row">
+            <label>Have you been to 1970 Salon before? *</label>
+            <div class="options">
+              <label><input type="radio" name="1970 Salon Client" value="Yes" required /> Yes</label>
+              <label><input type="radio" name="1970 Salon Client" value="No" /> No</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Hair length right now *</label>
+            <div class="options">
+              <label><input type="radio" name="Hair Length" value="Above chin" required /> Above chin</label>
+              <label><input type="radio" name="Hair Length" value="Chin to shoulders" /> Chin–shoulders</label>
+              <label><input type="radio" name="Hair Length" value="Below shoulders" /> Below shoulders</label>
+              <label><input type="radio" name="Hair Length" value="Mid-back or longer" /> Mid-back or longer</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Natural hair texture *</label>
+            <div class="options">
+              <label><input type="radio" name="Texture" value="Straight" required /> Straight</label>
+              <label><input type="radio" name="Texture" value="Wavy" /> Wavy</label>
+              <label><input type="radio" name="Texture" value="Curly" /> Curly</label>
+              <label><input type="radio" name="Texture" value="Coily" /> Coily</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="color-history">
+              Color history (last 2 years) – box dye, bleach, highlights, gloss, etc. *
+            </label>
+            <textarea id="color-history" name="Color History" rows="3" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="goal">
+              What are you hoping to do at your first visit? *
+            </label>
+            <select id="goal" name="Service Goal" required>
+              <option value="">Select one</option>
+              <option value="Haircut only">Haircut only</option>
+              <option value="Cut and color">Cut & Color</option>
+              <option value="Color refresh / gloss">Color refresh / gloss</option>
+              <option value="Big change / transformation">Big change / transformation</option>
+              <option value="Not sure, need guidance">Not sure – need guidance</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>
+              How open are you to change?
+            </label>
+            <div class="options">
+              <label><input type="radio" name="Change Comfort" value="Keep it similar" /> Keep it similar</label>
+              <label><input type="radio" name="Change Comfort" value="Open to tweaks" /> Open to tweaks</label>
+              <label><input type="radio" name="Change Comfort" value="Ready for a big change" /> Ready for a big change</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="maintenance">
+              How much maintenance are you okay with? (time, trims, color upkeep)
+            </label>
+            <textarea id="maintenance" name="Maintenance Preference" rows="2"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="photos">
+              Link to inspo / current hair photos (Instagram, Google Drive, etc.)
+            </label>
+            <input type="url" id="photos" name="Photo Links" placeholder="https://..." />
+          </div>
+
+          <div class="form-row">
+            <label for="notes">
+              Anything else you’d like me to know about your hair or routine?
+            </label>
+            <textarea id="notes" name="Notes" rows="3"></textarea>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn-primary">Send form</button>
+            <a href="book.html" class="btn-secondary">Go to booking</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Darylle Rae Alvarez. All rights reserved.</p>
+  </footer>
+
+  <div class="mobile-cta-bar">
+    <a href="book.html" class="mobile-cta-btn">Book with Darylle</a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
